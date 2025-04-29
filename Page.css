@@ -1,0 +1,85 @@
+/* Reset and layout */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Simulate iPhone screen */
+.phone-simulation {
+    width: 390px;
+    height: 700px;
+    background-color: darkorange;
+    border: 10px solid #222;
+    border-radius: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Title styling */
+.titre {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* White box with form content */
+.phone-simulation .caracteristique {
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Headline inside form */
+.searchT {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Inputs styling */
+.caracteristique input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Checkbox section layout */
+.caracteristique .checkboxes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Submit button */
+button[type="submit"] {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
