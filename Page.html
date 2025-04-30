@@ -9,15 +9,15 @@
 </head>
 
 <body>
-    <div class="phone-simulation">
-        <h1 class="titre">Troc Carrot 🥕</h1>
-
-        <div class="caracteristique">
+    <h1 class="titre">Troc Carrot 🥕</h1>
+    <div class="MiddleBox">
+    
+        <form class="caracteristique">
             <h3 class="searchT">What do you want to find?</h3>
-            <label>Name:</label>
-            <input type="text" name="name" />
-            <label>Place:</label>
-            <input type="text" name="place" />
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" />
+            <label for="place">Place:</label>
+            <input type="text" name="place" id="place" />
             <div class="checkboxes">
                 <input type="checkbox" name="choice" id="rent" />
                 <label for="rent">Rent</label>
@@ -25,8 +25,9 @@
                 <label for="lend">Lend</label>
             </div>
             <button type="submit">Submit</button>
-        </div>
-
+        </form>
+    </div>
+    
 </body>
 
 </html>

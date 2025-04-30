@@ -12,7 +12,8 @@ body {
 
 .titre {
     text-align: center;
-    margin-bottom: 20px;
+    top: 1%;
+    position: fixed;
 }
 
 .blackT {
@@ -23,7 +24,7 @@ body {
 .MiddleBox {
     height: 100%;
     width: 60%;
-    background-color: grey;
+    background-color: darkorange;
     overflow: hidden;
     
 }
