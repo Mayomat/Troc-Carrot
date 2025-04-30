@@ -9,10 +9,22 @@ body {
 
 }
 
-.titre {
+.TitleBox {
+    width: 60%;
+    height: 10%;
+    background-color: darkorange;   
+    position: fixed;
+    top : 0px;
+    justify-content: center;
+}
+
+.TitleBox .titre {
     text-align: center;
     top: 1%;
-    position: fixed;
+}
+
+a{
+    text-decoration: none;
 }
 
 .blackT {

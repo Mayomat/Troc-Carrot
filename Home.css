@@ -9,19 +9,30 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
 }
-
-.titre {
-    text-align: center;
-    top: 1%;
+.TitleBox {
+    width: 60%;
+    height: 10%;
+    background-color: darkorange;   
     position: fixed;
+    top : 0px;
+    justify-content: center;
 }
 
+.TitleBox .titre {
+    text-align: center;
+    top: 1%;
+}
+
+a{
+    text-decoration: none;
+}
 .blackT {
     color:#333;
     display: inline;
 }
 
 .MiddleBox {
+    padding-top: 10%;
     height: 100%;
     width: 60%;
     background-color: darkorange;
@@ -31,7 +42,7 @@ body {
 .MiddleBox .text1 {
     text-align: left;
     padding-top: 1%;
-    padding-left: 5%;
+    padding-left: 10%;
     font-size: 50px;
     font-weight: 1000;
     color: white;
@@ -40,7 +51,7 @@ body {
 
 .MiddleBox .text2 {
     text-align: right;
-    padding-right: 5%;
+    padding-right: 10%;
     font-size: 50px;
     font-weight: 1000;
     color: white;
