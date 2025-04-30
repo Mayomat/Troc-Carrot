@@ -2,24 +2,12 @@
 body {
     margin: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
-    background: #ccc;
+    background-color: gray;
     font-family: Arial, Helvetica, sans-serif;
-}
 
-/* Simulate iPhone screen */
-.phone-simulation {
-    width: 390px;
-    height: 700px;
-    background-color: darkorange;
-    border: 10px solid #222;
-    border-radius: 40px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 .titre {
@@ -32,27 +20,34 @@ body {
     display: inline;
 }
 
-.phone-simulation  .text1 {
+.MiddleBox {
+    height: 100%;
+    width: 60%;
+    background-color: grey;
+    overflow: hidden;
+    
+}
+.MiddleBox .text1 {
     text-align: left;
-    padding-top: 20%;
+    padding-top: 1%;
     padding-left: 5%;
-    font-size: 26px;
+    font-size: 50px;
     font-weight: 1000;
     color: white;
     font-family: 'Orbitron', sans-serif;
 }
 
-.phone-simulation .text2 {
+.MiddleBox .text2 {
     text-align: right;
     padding-right: 5%;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 1000;
     color: white;
     font-family: 'Orbitron', sans-serif;
 }
 
 .button1 {
-    padding-top: 20%;
+    padding-top: 10%;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -67,19 +62,49 @@ body {
 
 }
 
+.top-buttons {
+    position: absolute;
+    top: 3%;
+    right: 10%;
+    display: flex;
+    gap: 20%; /* Espace entre les boutons */
+}
+
+/* Styles pour les boutons */
+.login.button,
+.sign-up.button {
+    background-color: orange;
+    padding: 20% 40%;
+    border-radius: 10%;
+    font-size: 100%;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    box-shadow: 0 4% 6% rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.login.button:hover,
+.signin.button:hover {
+    background-color: #e69500; /* Orange plus foncé au survol */
+}
+
 /* Submit button */
 button[type="submit"] {
-    padding: 3%;
-    width: 80%;
+    padding: 2%;
+    width: 70%;
     border-radius: 20px;
     border: none;
     background-color: #FFF;
     color: #333;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 24px;
+    font-weight: bold;
     transition: background-color 0.3s;
 }
 button[type="submit"]:hover {
     background-color: #e3e3e3;
 }
-
