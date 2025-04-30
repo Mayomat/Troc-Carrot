@@ -1,0 +1,79 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: orange;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the sign-up form */
+.signup-container {
+    background: #fff;
+    padding: 5%; /* Adjusted padding to use percentages */
+    border-radius: 2%; /* Rounded corners in percentage */
+    box-shadow: 0 4% 6% rgba(0, 0, 0, 0.1);
+    width: 90%; /* Adjusted width to use percentage */
+    max-width: 400px;
+    margin-right: 5%; /* Added margin to create space on the right */
+}
+
+/* Header styles */
+.signup-container h1 {
+    margin-bottom: 5%; /* Adjusted margin to use percentage */
+    font-size: 150%; /* Adjusted font size to use percentage */
+    text-align: center;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 5%; /* Adjusted margin to use percentage */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 2%; /* Adjusted margin to use percentage */
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 95%; /* Reduced width to add space on the right */
+    padding: 2%; /* Adjusted padding to use percentage */
+    border: 1% solid #ccc; /* Adjusted border width to use percentage */
+    border-radius: 2%; /* Rounded corners in percentage */
+}
+
+/* Button styles */
+.form-group button {
+    width: 100%;
+    padding: 2%; /* Adjusted padding to use percentage */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 1%; /* Rounded corners in percentage */
+    font-size: 120%; /* Adjusted font size to use percentage */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+.form-footer {
+    text-align: center;
+    margin-top: 1%; /* Adjusted margin to use percentage */
+}
+
+.form-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
