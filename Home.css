@@ -20,8 +20,13 @@ body {
     top : 0px;
     justify-content: center;
 }
-
-.top-buttons {
+.top-button-left {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    display: flex;
+}
+.top-button-right {
     position: absolute;
     top: 10%;
     right: 12%;
@@ -29,7 +34,8 @@ body {
     gap: 20%;
 }
 #loginbutton,
-#signupbutton {
+#signupbutton,
+#inventorybutton {
     background-color: orange;
     padding: 20% 40%;
     border-radius: 5%;
@@ -44,7 +50,8 @@ body {
     white-space: nowrap;
 }
 #loginbutton:hover,
-#signupbutton:hover {
+#signupbutton:hover,
+#inventorybutton:hover {
     background-color: #e69500;
 }
 
