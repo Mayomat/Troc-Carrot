@@ -4,37 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troc Carrot - Home</title>
+    <title>Troc Carrot - Post</title>
     <link rel="stylesheet" href="Post.css">
 </head>
 
 <body>
     <div class="TitleBox">
-        <h1 id="titre"> <a href="Home.html">Troc Carrot 🥕</a></h1>
+        <h1 id="titre"><a href="Home.html">Troc Carrot 🥕</a></h1>
+        <div class="top-button-left">
+            <div id="inventorybutton"><a href="Inventory.html">Inventory</a></div>
+        </div>
+        <div class="top-button-right">
+            <div id="signupbutton"><a href="sign-up.html">sign up</a></div>
+            <div id="loginbutton"><a href="login.html">login</a></div>
+        </div>
     </div>
     <div class="MiddleBox">
         <div class="annonce">
             <form id="modify">
-                <br><label for="title">Title</label>
-                <input type="text" id="title" value="Titre du post" />
-                <br><label for="price">Price</label>
-                <input type="text" id="price" value="price of the item" />
-                <br><label for="description">Description</label>
-                <br><input type="text" id="descriptionbox"  value="Description du post" />
-                <br><img id="img" src="carrot-isolated-illustration.jpg">
-                <br><button type="submit">Save Changes</button>
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Titre du post" />
+
+                <label for="price">Price</label>
+                <input type="text" id="price" placeholder="Price of the item" />
+
+                <label for="description">Description</label>
+                <input type="text" id="descriptionbox" placeholder="Description du post" />
+
+                <label for="photo">Ajouter une photo :</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+
+                <img id="img" src="carrot-isolated-illustration.jpg" alt="Aperçu de la photo">
+
+                <button type="submit">Save Changes</button>
             </form>
         </div>
     </div>
     <footer>
-        Made by:
-        <ul>
-            <br>Rémi Pyt
-            <br>Antoine Richard
-            <br>Léandre Baboula
-            <br>Jeremy Sagnard
-            <br>Matthieu Sirier
-            <br>Maxim Duret
-        </ul>
+        <div class="footer-center">© 2025 Troc Carrot. All rights reserved.</div>
+        <div class="footer-right">
+            <div class="footer-right-title">Made by:</div>
+            <ul>
+                <li>Rémi Pyt</li>
+                <li>Antoine Richard</li>
+                <li>Léandre Baboula</li>
+                <li>Jeremy Sagnard</li>
+                <li>Matthieu Sirier</li>
+                <li>Maxime Duret</li>
+            </ul>
+        </div>
     </footer>
-</body>w
+</body>
+</html>
