@@ -9,7 +9,16 @@
 </head>
 
 <body>
-    <div class="title"><a href="Home.html">Troc Carrot 🥕</a></div>
+    <div class="title"><a href="Home.html">Troc Carrot 🥕</a>
+        <div class="top-button-left">
+                <div id="inventorybutton"><a href="Inventory.html">Inventory</a></div>
+            </div>
+            <div class="top-button-right">
+                <div class=box id="signupbutton"><a href="sign-up.html" onclick="visibiliy()">sign up</a></div>
+                <div class=box id="loginbutton"><a href="login.html">login</a></div>
+                <div class=box id="profile" onclick="visibility()"> <a href="">Profile</a> </div>
+            </div>
+    </div>
     <div class="signup-container">
         <h1>Sign Up</h1>
         <form action="/submit-signup" method="POST">
