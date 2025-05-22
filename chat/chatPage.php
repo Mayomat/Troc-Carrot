@@ -17,13 +17,13 @@
 
 
 <body>
+    <h2 id="home-title"> <a href="..\Home.html">Troc Carrot 🥕</a></h2>
 <h1>You are chatting with <?php echo $user2?></h1>
 <div id="messages"></div>
 <div id="form">
-    <textarea id="messageToSend"></textarea>
+    <textarea id="messageToSend" placeholder="Écris ton message ici..."></textarea>
     <button id="button">Send</button>
 </div>
-
 <script>
     let usr1 = "<?php echo $_SESSION['username']; ?>";
     let usr2 = "<?php echo $user2; ?>"
