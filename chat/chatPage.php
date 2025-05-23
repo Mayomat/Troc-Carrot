@@ -15,9 +15,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
-
 <body>
+    
+<header>
+
     <h2 id="home-title"> <a href="..\Home.html">Troc Carrot 🥕</a></h2>
+    
+ </header>
 <h1>You are chatting with <?php echo $user2?></h1>
 <div id="messages"></div>
 <div id="form">
