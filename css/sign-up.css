@@ -97,13 +97,12 @@ body {
 
 /* Container for the sign-up form */
 .signup-container {
-    background: #fff;
-    padding: 5%; /* Adjusted padding to use percentages */
-    border-radius: 2%; /* Rounded corners in percentage */
-    box-shadow: 0 4% 6% rgba(0, 0, 0, 0.1);
-    width: 90%; /* Adjusted width to use percentage */
+    background: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
     max-width: 400px;
-    margin-right: 5%; /* Added margin to create space on the right */
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
@@ -126,10 +125,11 @@ body {
 }
 
 .form-group input {
-    width: 95%; /* Reduced width to add space on the right */
-    padding: 2%; /* Adjusted padding to use percentage */
-    border: 1% solid #ccc; /* Adjusted border width to use percentage */
-    border-radius: 2%; /* Rounded corners in percentage */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
 /* Button styles */
