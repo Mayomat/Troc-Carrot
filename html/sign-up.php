@@ -1,5 +1,6 @@
 <?php
 session_start(); // Start session
+//var_dump($_SESSION);
 
 ?>
 
@@ -23,13 +24,20 @@ session_start(); // Start session
             </div>
         <?php endif?>
             <div class="top-button-right">
-                <div class=box id="signupbutton"><a href="sign-up.php" onclick="visibiliy()">sign up</a></div>
-                <div class=box id="loginbutton"><a href="login.php">login</a></div>
-                <div class=box id="profile" onclick="visibility()"> <a href="">Profile</a> </div>
+                <div class=box id="signupbutton"><a href="sign-up.php">Sign up</a></div>
+                <div class=box id="loginbutton"><a href="login.php">Login</a></div>
+                <div class=box id="profile"> <a href="">Profile</a> </div>
             </div>
     </div>
     <div class="signup-container">
         <h1>Sign Up</h1>
+        <?php
+        if (isset($_SESSION['signup_error'])) {
+            echo '<div style="color:red; font-weight:bold; margin-bottom:10px;">' . $_SESSION['signup_error'] . '</div>';
+            unset($_SESSION['signup_error']);
+        }
+        ?>
+
         <form action="sign-up-treatment.php" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -47,6 +55,7 @@ session_start(); // Start session
                 <button type="submit">Sign Up</button>
             </div>
         </form>
+
         <div class="form-footer">
             <p>Already have an account? <a href="login.php ">Log In</a></p>
         </div>

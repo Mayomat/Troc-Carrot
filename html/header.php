@@ -1,3 +1,11 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+<link rel="stylesheet" href="../css/header.css">
+
+
 <header>
 
     <div class="TitleBox">
@@ -5,20 +13,28 @@
         <?php if (isset($_SESSION['username'])): ?>
             <div class="top-button-left">
                 <div id="inventorybutton"><a href="Inventory.php">Inventory</a></div>
+                <div id="chatbutton"><a href="Chat.php">Chat</a></div>
             </div>
+
         <?php endif?>
         <div class="top-button-right">
             <?php if (isset($_SESSION['username'])): ?>
-                <div class="box" id="profile">
-                    <a href="profile.php">Welcome, <?= htmlspecialchars($_SESSION['username']) ?></a>
+                <div id="profile">
+                    <a href="profile.php">Your account</a>
                 </div>
-                <div class="top-button-right" id="logoutbutton">
+                <div id="logoutbutton">
                     <a href="logout.php">Logout</a>
                 </div>
             <?php else: ?>
-                <div class="box" id="signupbutton"><a href="sign-up.php">Sign Up</a></div>
-                <div class="box" id="loginbutton"><a href="login.php">Login</a></div>
+                <div id="signupbutton">
+                    <a href="sign-up.php">Sign Up</a>
+                </div>
+                <div id="loginbutton">
+                    <a href="login.php">Login</a>
+                </div>
             <?php endif; ?>
         </div>
+
+
     </div>
 </header>

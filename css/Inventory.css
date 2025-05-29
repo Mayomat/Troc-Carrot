@@ -9,19 +9,33 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
-
-/* Bannière  */
+/* HEADER FIXE */
 .TitleBox {
     display: flex;
-    width: 100%;
-    height: 10%;
-    background-color: darkorange;   
-    position: fixed;
-    top : 0px;
+    align-items: center;
     justify-content: center;
-    z-index: 1000; /*LMAO for the button so it is not above it */
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;    
+    width: 100%;
+    height: 70px; /* Hauteur fixe */
+    background-color: darkorange;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    box-sizing: border-box;
+    box-shadow: rgba(17, 17, 26, 0.1) 0 4px 16px, rgba(17, 17, 26, 0.1) 0 8px 24px, rgba(17, 17, 26, 0.1) 0 16px 56px;
 }
+
+#titre {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#titre a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .top-button-left,
 .top-button-right {
     position: absolute;
@@ -88,7 +102,6 @@ body {
     background-color: #e69500;
 }
 
-
 /* Middle box*/
 .MiddleBox {
     flex: 1 0 auto;
@@ -127,20 +140,19 @@ body {
 #Price {
     text-align: right;
     margin-right: 10%;
-    
+
 }
 #img {
     height: 50vh;
     width: 100 wh;
 }
 #modify {position: relative;
-    top:5%;
+    top:90%;
     background-color: orange;
     padding: 2%;
     margin-left: 4%;
-    font-size: 5;
     font-weight: bold;
-    color: white;   
+    color: white;
     border-radius: 20px;
     border: none;
     cursor: pointer;

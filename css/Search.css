@@ -6,15 +6,33 @@ body {
     margin: 0;
 }
 
+/* HEADER FIXE */
 .TitleBox {
-    width: 100%;
-    height: 10%;
-    background-color: darkorange;   
-    position: fixed;
-    top : 0px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;    
+    width: 100%;
+    height: 70px; /* Hauteur fixe */
+    background-color: darkorange;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    box-sizing: border-box;
+    box-shadow: rgba(17, 17, 26, 0.1) 0 4px 16px, rgba(17, 17, 26, 0.1) 0 8px 24px, rgba(17, 17, 26, 0.1) 0 16px 56px;
 }
+
+#titre {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#titre a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .top-button-left,
 .top-button-right {
     position: absolute;
@@ -31,9 +49,7 @@ body {
     gap: 12px;
 }
 
-.top-button-right #profile {
-    display:none;
-}
+
 .top-button-right #signupbutton,
 .top-button-right #loginbutton {
     display: flex;
@@ -81,26 +97,12 @@ body {
     background-color: #e69500;
 }
 
-.TitleBox .titre {
-    text-align: center;
-    top: 1%;
-}
-
-a{
-    text-decoration: none;
-    color:#ffffff;
-}
-
-.blackT {
-    color:#333;
-    display: inline;
-}
 
 .MiddleBox {
     flex: 1 0 auto;
     min-height: 0;
     width: 60%;
-    margin: 10% 20%; 
+    margin: 5% auto 4% auto;
     background-color: darkorange;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -145,6 +147,19 @@ input[type="text"], label {
     flex-wrap: wrap;
 }
 
+/*LINKS*/
+.MiddleBox a{
+    text-decoration: none;
+    color: #b52424;
+
+
+}
+
+.MiddleBox a:hover{
+    background-color: white;
+    border-radius: 3px;
+}
+
 /* Submit button */
 button[type="submit"] {
     padding: 15px;
@@ -161,6 +176,31 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #555;
 }
+
+/*ANNONCES*/
+.annonce-box {
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin:12px auto 50px auto;
+    border-radius: 8px;
+    max-width: 600px;
+    background-color: darkorange;
+    text-align: center;
+
+}
+.annonce-box img {
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    margin: 12px auto 12px auto;
+
+}
+.annonce-box h2 {
+    margin-top: 0;
+}
+
+
+/*footer*/
 
 footer {
     text-align: center;

@@ -20,9 +20,9 @@
             </div>
         <?php endif?>
             <div class="top-button-right">
-                <div class=box id="signupbutton"><a href="../html/sign-up.php" onclick="visibiliy()">sign up</a></div>
-                <div class=box id="loginbutton"><a href="../html/login.php">login</a></div>
-                <div class=box id="profile" onclick="visibility()"> <a href="">Profile</a> </div>
+                <div class=box id="signupbutton"><a href="../html/sign-up.php">Sign up</a></div>
+                <div class=box id="loginbutton"><a href="../html/login.php">Login</a></div>
+                <div class=box id="profile"> <a href="">Profile</a> </div>
             </div>
     </div>
 

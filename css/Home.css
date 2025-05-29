@@ -33,7 +33,7 @@ body {
     left: 0;
     z-index: 200;
     box-sizing: border-box;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;    
+    box-shadow: rgba(17, 17, 26, 0.1) 0 4px 16px, rgba(17, 17, 26, 0.1) 0 8px 24px, rgba(17, 17, 26, 0.1) 0 16px 56px;
 }
 
 #titre {
@@ -63,9 +63,7 @@ body {
     gap: 12px;
 }
 
-.top-button-right #profile {
-    display:none;
-}
+
 .top-button-right #signupbutton,
 .top-button-right #loginbutton {
     display: flex;
