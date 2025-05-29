@@ -21,14 +21,14 @@ include ("../html/header.php");
             <div id="titre">Location one carrot</div>
             <div id="Price">1€</div>
             <hr>
-            <img id="img" src="../img/carrot-isolated-illustration.jpg">
+            <img id="img" src="../img/carrot-isolated-illustration.jpg" alt="carrot illustration">
         </div>
         <div class="annonce">
             <button id="modify"><a href="Modify.php">Modify</a></button>
             <div id="titre">Location lot carrotv2</div>
             <div id="Price">2€</div>
             <hr>
-            <img id="img" src="../img/carrotcarrot.jpg">
+            <img id="img" src="../img/carrotcarrot.jpg" alt="carrotjpg">
         </div>
         
     </div>
