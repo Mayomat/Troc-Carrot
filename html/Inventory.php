@@ -43,7 +43,7 @@ include ("../html/header.php");
             </li>
             <li>Rémi Pyt</li>
             <li>Antoine Richard</li>
-            <li>Léandre Baboula</li>
+            <li>Léandre Baboulat</li>
             <li>Jeremy Sagnard</li>
             <li>Matthieu Sirier</li>
             <li>Maxime Duret</li>

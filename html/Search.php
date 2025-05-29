@@ -32,9 +32,9 @@ include ("../html/header.php");
     <div class="MiddleBox">
 
         <form class="caracteristique">
-            <?php
-            if ($result->num_rows > 0)?> <!-- to avoid having to write echo <p> etc... -->
-                <p class ="MiddleBox">No annonces found for the moment ! <a href="Post.php">Be the first to post one !</a></p>
+            <?php if ($result->num_rows === 0): ?> <!-- syntax to avoid using echo -->
+                <p class="MiddleBox">No annonces found for the moment. <a href="Post.php">Be the first one to post!</a></p>
+            <?php endif; ?>
 
             <h3 class="searchT">What do you want to find?</h3>
             <label for="name">Name:</label>
@@ -62,6 +62,7 @@ include ("../html/header.php");
                 echo '<p><strong>Posted on:</strong> ' . $date . '</p>';
 
                 echo '<p><strong>Description:</strong> ' . ($row['description']) . '</p>';
+                echo '<p><strong>Location:</strong>'.($row['location']).'</p>';
                 echo '<p><strong>Type:</strong> ' . ($row['type']) . '</p>';
                 if (!empty($row['photo'])) {
                     echo '<img src="' . ($row['photo']) . '"class=picture"' . '" alt="Annonce Image">';
@@ -87,7 +88,7 @@ include ("../html/header.php");
             </li>
             <li>Rémi Pyt</li>
             <li>Antoine Richard</li>
-            <li>Léandre Baboula</li>
+            <li>Léandre Baboulat</li>
             <li>Jeremy Sagnard</li>
             <li>Matthieu Sirier</li>
             <li>Maxime Duret</li>

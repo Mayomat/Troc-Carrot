@@ -27,7 +27,7 @@ include ("../html/header.php")
 
         <?php
         if (isset($_SESSION['loginconfirmation'])) {
-            echo '<div style="color:#251205; font-weight:bold; margin-bottom:12px; text-align: center; font-size:40px;">' . $_SESSION['loginconfirmation'] . '</div>';
+            echo '<div style="color:#251205; font-weight:bold; margin-bottom:12px; text-align: center; font-size:40px;">' .'Welcome back '. $_SESSION['username'] . '</div>';
             unset($_SESSION['loginconfirmation']);
         }
         ?>
@@ -64,7 +64,7 @@ include ("../html/header.php")
             </li>
             <li>Rémi Pyt</li>
             <li>Antoine Richard</li>
-            <li>Léandre Baboula</li>
+            <li>Léandre Baboulat</li>
             <li>Jeremy Sagnard</li>
             <li>Matthieu Sirier</li>
             <li>Maxime Duret</li>

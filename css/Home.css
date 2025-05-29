@@ -165,7 +165,7 @@ body {
 /* Submit button */
 button[type="submit"] {
     padding: 2%;
-    width: 70%;
+    width:70%;
     border-radius: 20px;
     border: none;
     background-color: #FFF;
@@ -194,6 +194,7 @@ footer {
     background-color: darkorange;
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
+    border-top:1px solid black;
 }
 footer li {
     list-style-type:none;

@@ -19,7 +19,9 @@ if ($conn->connect_error) {
 }
 
 // Fetch all annonces
-$sql = "SELECT title, price, description, type, photo, created_at FROM annonces";
+$user_id = $_SESSION['user_id'];
+
+$sql = "SELECT * FROM annonces WHERE user_id = $user_id";
 $result = $conn->query($sql);
 ?>
 
@@ -74,8 +76,24 @@ include ("../html/header.php")
     $conn->close();
     ?>
 </section>
-<?php
-include ("../html/footer.php");
-?>
+<footer>
+    <div class="footermiddle">
+        <h4>© 2025 Troc Carrot.</h4>
+    </div>
+    <div class="footerright">
+        <ul>
+            <li>
+                <h3>Made by the greatest Int1 team:</h3>
+            </li>
+            <li>Rémi Pyt</li>
+            <li>Antoine Richard</li>
+            <li>Léandre Baboula</li>
+            <li>Jeremy Sagnard</li>
+            <li>Matthieu Sirier</li>
+            <li>Maxime Duret</li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>
+

@@ -10,6 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troc Carrot - Post</title>
     <link rel="stylesheet" href="../css/Post.css">
+    <script src="../js/preview.js"></script>
 </head>
 
 <body>
@@ -64,7 +65,7 @@ include ("../html/header.php");
         } else {
             // User is not logged in
             echo '<p style="color: red; font-weight: bold; text-align: center;">You must be logged in to post an annonce.</p>';
-            echo '<p style="text-align: center;"><a href="login.php">Log in here</a></p>';
+            echo '<p style="text-align: center;"><a href="sign-up.php">Sign in here</a></p>';
         }
         ?>
 
@@ -85,7 +86,7 @@ include ("../html/header.php");
             </li>
             <li>Rémi Pyt</li>
             <li>Antoine Richard</li>
-            <li>Léandre Baboula</li>
+            <li>Léandre Baboulat</li>
             <li>Jeremy Sagnard</li>
             <li>Matthieu Sirier</li>
             <li>Maxime Duret</li>

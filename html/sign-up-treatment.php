@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") { //to be sure its post and not get
             $_SESSION['email'] = $email;
             // to get user id VERY IMPORTANT
             $user_id = $conn->insert_id;
-            $_SESSION['User_iD'] = $user_id;
+            $_SESSION['User_id'] = $user_id;
             $_SESSION['signup_confirmation']= "Welcome, $username!";
             header("Location: Home.php");
             exit();
