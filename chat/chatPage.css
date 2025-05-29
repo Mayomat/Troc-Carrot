@@ -1,0 +1,136 @@
+body {
+    background-color: #FF8C00;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: 40px;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    text-shadow: 1px 2px 8px #b36b00;
+    margin-bottom: 50px;
+    font-size: 60px;
+    
+}
+
+#home-title {
+    position: fixed;
+    top: 24px;
+    left: 36px;
+    font-size: 2em;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    z-index: 100;
+}
+
+#home-title a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#home-title a:hover {
+    color: #ffb347;
+    text-decoration: underline;
+}
+
+#messages {
+    height: 600px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    
+    border: 2px solid #e69500;
+    border-radius: 16px;
+    padding: 18px 12px;
+    overflow-y: auto;
+     box-shadow: 0 10px 12px rgba(70, 47, 5, 0.15);
+    font-size: 1.1em;
+    color: #333;
+
+     background:
+        linear-gradient(rgba(255,251,230,0.85), rgba(255,251,230,0.85)),
+        url("carrot-isolated-illustration.jpg");
+    ;
+    background-size: 36% 64%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFFCEA;
+}
+
+
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 12px;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#messageToSend {
+    width: 80%;
+    min-height: 70px;
+    max-height: 500px;
+    min-width: 200px;
+    max-width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #e69500;
+    border-radius: 8px;
+    font-size: 1.3em;
+    resize: vertical;
+    background: #fff;
+    color: #333;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+    box-shadow: 0 10px 12px rgba(70, 47, 5, 0.15);}
+
+
+
+
+#messageToSend:focus {
+    border-color: #ffb347;
+}
+
+#button {
+    width: 16%;
+    min-width: 80px;
+    padding: 12px 0;
+    background: linear-gradient(90deg, #e69500 60%, #ffb347 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+     box-shadow: 0 10px 12px rgba(70, 47, 5, 0.15);
+    transition: background 0.2s, transform 0.1s;
+}
+
+#button:hover {
+    background: linear-gradient(90deg, #ffb347 60%, #e69500 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 600px) {
+    #messages, #form {
+        width: 98%;
+        max-width: 98%;
+    }
+    #form {
+        flex-direction: column;
+        gap: 8px;
+    }
+    #messageToSend, #button {
+        width: 100%;
+        min-width: unset;
+    }
+}
