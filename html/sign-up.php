@@ -1,3 +1,9 @@
+<?php
+session_start(); // Start session
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,19 +15,22 @@
 </head>
 
 <body>
-    <div class="title"><a href="Home.html">Troc Carrot 🥕</a>
-        <div class="top-button-left">
-                <div id="inventorybutton"><a href="Inventory.html">Inventory</a></div>
+
+    <div class="title"><a href="Home.php">Troc Carrot 🥕</a>
+        <?php if (isset($_SESSION['username'])): ?>
+            <div class="top-button-left">
+                <div id="inventorybutton"><a href="Inventory.php">Inventory</a></div>
             </div>
+        <?php endif?>
             <div class="top-button-right">
-                <div class=box id="signupbutton"><a href="sign-up.html" onclick="visibiliy()">sign up</a></div>
-                <div class=box id="loginbutton"><a href="login.html">login</a></div>
+                <div class=box id="signupbutton"><a href="sign-up.php" onclick="visibiliy()">sign up</a></div>
+                <div class=box id="loginbutton"><a href="login.php">login</a></div>
                 <div class=box id="profile" onclick="visibility()"> <a href="">Profile</a> </div>
             </div>
     </div>
     <div class="signup-container">
         <h1>Sign Up</h1>
-        <form action="/submit-signup" method="POST">
+        <form action="sign-up-treatment.php" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -39,7 +48,7 @@
             </div>
         </form>
         <div class="form-footer">
-            <p>Already have an account? <a href="login.html ">Log In</a></p>
+            <p>Already have an account? <a href="login.php ">Log In</a></p>
         </div>
     </div>
 </body>

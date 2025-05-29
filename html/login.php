@@ -1,3 +1,6 @@
+<?php
+    session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,12 +13,14 @@
 
 <body>
     <div class="title">
-        <a href="Home.html">Troc Carrot 🥕</a>
-        <div class="top-button-left">
-                <div id="inventorybutton"><a href="Inventory.html">Inventory</a></div>
+        <a href="Home.php">Troc Carrot 🥕</a>
+        <?php if (isset($_SESSION['username'])): ?>
+            <div class="top-button-left">
+                <div id="inventorybutton"><a href="Inventory.php">Inventory</a></div>
             </div>
+        <?php endif?>
             <div class="top-button-right">
-                <div class=box id="signupbutton"><a href="sign-up.html" onclick="visibiliy()">sign up</a></div>
+                <div class=box id="signupbutton"><a href="sign-up.php" onclick="visibiliy()">sign up</a></div>
                 <div class=box id="loginbutton"><a href="login.html">login</a></div>
                 <div class=box id="profile" onclick="visibility()"> <a href="">Profile</a> </div>
             </div>
@@ -23,7 +28,7 @@
 
     <div class="signin-container">
         <h1>Welcome back ! 🥕</h1>
-        <form action="/signin" method="POST">
+        <form action="login-treatment.php" method="POST">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
@@ -35,7 +40,7 @@
             <button type="submit" class="signin-button">Sign In</button>
         </form>
         <div class="signup-link">
-            <p>Don't have an account? <a href="sign-up.html">Sign up</a></p>
+            <p>Don't have an account? <a href="sign-up.php">Sign up</a></p>
         </div>
     </div>
 </body>
