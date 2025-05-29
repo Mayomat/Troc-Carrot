@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch all annonces
-$user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['User_id'];
 
 $sql = "SELECT * FROM annonces WHERE user_id = $user_id";
 $result = $conn->query($sql);
@@ -47,7 +47,12 @@ include ("../html/header.php")
     <h2>Here are some information about your account :</h2>
     <p>Email: <?php echo ($_SESSION['email']); ?></p>
     <h3>Your inventory :</h3>
+    <?php
+    if ($result->num_rows===0){
+        echo '<p>You have not posted for the moment !</p>';
 
+    }
+    ?>
 
 
 
@@ -70,8 +75,6 @@ include ("../html/header.php")
             }
             echo '</div>';
         }
-    } else {
-        echo '<p>You have not posted for the moment !</p>';
     }
     $conn->close();
     ?>

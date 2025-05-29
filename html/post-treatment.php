@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $location = $_POST['location'];
     $description = $_POST['description'];
     $type = $_POST['type'];
-
+    $user_id = $_SESSION['User_id'];
     // Handle photo upload (merci les ia et internet)
     $photoPath = NULL;
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] === UPLOAD_ERR_OK) {
@@ -40,17 +40,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // verify we handled photo
     if ($photoPath !== NULL) {
-        $sql = "INSERT INTO annonces (title, price, description, location,type, photo) VALUES (?, ?, ?,?, ?, ?)";
+        $sql = "INSERT INTO annonces (title, price, description, location,type, photo, user_id) VALUES (?, ?, ?,?, ?, ?,?)";
         $stmt = $conn->prepare($sql);
         if ($stmt === false) {
             die("Prepare failed: " . htmlspecialchars($conn->error));
         }
 
-        $stmt->bind_param("ssssss", $title, $price, $description, $location,$type, $photoPath);
+        $stmt->bind_param("ssssssi", $title, $price, $description, $location,$type, $photoPath,$user_id);
     } else {
         $sql = "INSERT INTO annonces (title, price, description, location, type) VALUES (?, ?, ?, ?,?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssss", $title, $price, $description, $location,$type);
+        $stmt->bind_param("sssssi", $title, $price, $description, $location,$type,$user_id);
     }
 
     if ($stmt->execute()) {

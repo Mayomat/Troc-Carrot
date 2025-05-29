@@ -29,6 +29,7 @@ include ("../html/header.php");
         if (isset($_SESSION['username'])) {
             // Show form only if user is logged in
             ?>
+                <!-- enctype for image or else it explodes-->
             <form id="annonceForm" method="POST" enctype="multipart/form-data" action="post-treatment.php">
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" placeholder="Titre du post" required />
