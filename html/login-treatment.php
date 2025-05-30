@@ -23,8 +23,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_id = 0;
     $username = "";
     $stmt->bind_result($user_id, $username);
+    if ($stmt->num_rows === 0) {
+        $_SESSION['loginconfirmation'] = "No user exists with this email try <a id='redirection' href='sign-up.php'>signing up</a>";
+        header("Location: login.php");
+        exit();
+    }
 
-    if ($stmt->num_rows == 1) {
+    if ($stmt->num_rows === 1) {
         $stmt->fetch();
 
         $_SESSION['User_id'] = $user_id;

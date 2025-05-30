@@ -24,7 +24,8 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") { //to be sure its post and not get
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $_SESSION['signup_error'] = "Username or email already exists. Please choose a different one.";
+        $_SESSION['signup_error'] = "Username or email already exists. Please choose a different one. 
+        Or try <a id='redirection' href='login.php'>logging in</a>";
         header("Location: sign-up.php");
         exit();
     }

@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
 
     if ($stmt->execute()) {
         $_SESSION['modifyconfirmation'] = "Annonce updated successfully!";
-        header("Location: Modify.php");
+        header("Location: ../html/Inventory.php");
         exit();
     } else {
         echo "Error: " . $stmt->error;

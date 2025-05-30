@@ -40,7 +40,16 @@ include ("../html/header.php");
         <p class="MiddleBox">Your inventory is empty ! <a href="Post.php">It's time for your first post !</a></p>
     <?php endif; ?>
 </div>
+<section id="update">
+    <?php
+    if (isset($_SESSION['modifyconfirmation'])) {
+        echo '<div style="color:#251205; font-weight:bold; margin-top: 20px; margin-bottom:12px; text-align: center;">' . $_SESSION['modifyconfirmation'] . '</div>';
+        unset($_SESSION['modifyconfirmation']);
+    }
+    ?>
+</section>
 <section id="itemsinventory">
+
     <?php
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) { // fetch assoc reads a line of the db

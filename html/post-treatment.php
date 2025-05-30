@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt->bind_param("ssssssi", $title, $price, $description, $location,$type, $photoPath,$user_id);
     } else {
-        $sql = "INSERT INTO annonces (title, price, description, location, type) VALUES (?, ?, ?, ?,?)";
+        $sql = "INSERT INTO annonces (title, price, description, location, type, $user_id) VALUES (?, ?, ?, ?,?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sssssi", $title, $price, $description, $location,$type,$user_id);
     }

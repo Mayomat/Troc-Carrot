@@ -33,7 +33,7 @@ $stmt->bind_param("ii", $item_id, $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 
-if ($result->num_rows === 0) {
+if ($result->num_rows === 0) { // au cas où
     die("Item not found or you don't have permission to edit this item.");
 }
 
@@ -60,17 +60,13 @@ include ("../html/header.php");
 ?>
 <div class="MiddleBox">
     <div class="annonce">
-        <?php
-        if (isset($_SESSION['modifyconfirmation'])) {
-        echo '<div style="color:#251205; font-weight:bold; margin-top: 20px; margin-bottom:12px; text-align: center;">' . $_SESSION['modifyconfirmation'] . '</div>';
-        unset($_SESSION['modifyconfirmation']);
-        }
-        ?>
+
         <!-- enctype for image or else it explodes-->
 
         <form id="modify" action="modify-treatment.php" method="POST" enctype="multipart/form-data">
             <!-- Hidden field for item id -->
             <input type="hidden" name="id" value="<?= ($item['id']) ?>" />
+            <!-- We need that for after-->
 
             <!-- value everywhere from $item for the user to dont forget and know what to modfy-->
             <label for="title">Title</label>
@@ -80,8 +76,7 @@ include ("../html/header.php");
             <input type="text" id="price" name="price" value="<?= ($item['price']) ?>" required />
 
             <label for="description">Description</label>
-            < type="text" id="description" name="description" value="<?= ($item['description']) ?> "required/>
-
+            <input type="text" id="description" name="description" value="<?= ($item['description']) ?>" required/>
             <label for="location">Location</label>
             <input type="text" id="location" name="location" value="<?= ($item['location']) ?>" required />
 
@@ -97,6 +92,12 @@ include ("../html/header.php");
 
             <button type="submit">Save changes</button>
         </form>
+
+        <form action="delete-treatment.php" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
+            <input type="hidden" name="id" value="<?= ($item['id']) ?>" />
+            <button type="submit">Delete this item</button>
+        </form>
+
 
     </div>
 </div>

@@ -183,6 +183,15 @@ body {
 
 }
 
+/* update(delete or modified) */
+#update{
+    background-color: darkorange;
+    font-size:40px;
+    width:40%;
+    margin:10px auto 10px auto;
+    border-radius: 5%;
+}
+
 /* background image */
 #background {
     width: 100%;

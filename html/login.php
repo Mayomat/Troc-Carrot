@@ -28,6 +28,12 @@
 
     <div class="signin-container">
         <h1>Welcome back ! 🥕</h1>
+        <?php
+        if (isset($_SESSION['loginconfirmation'])) {
+            echo '<div style="color:red; font-weight:bold; margin-bottom:10px;">' . $_SESSION['loginconfirmation'] . '</div>';
+            unset($_SESSION['loginconfirmation']);
+        }
+        ?>
         <form action="login-treatment.php" method="POST">
             <div class="form-group">
                 <label for="email">Email</label>
