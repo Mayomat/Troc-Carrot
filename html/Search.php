@@ -2,7 +2,7 @@
 session_start();
 $servername = "localhost";
 $username = "root";
-$password = "Antoine-972";
+$password = "YourPassword";
 $database = "Troc_carrot";
 
 // Connect to database
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch all annonces
-$sql = "SELECT title, price, description, location, type, photo, created_at FROM annonces ORDER BY id DESC";
+$sql = "SELECT title, price, description, location, type, photo, created_at, user_id FROM annonces ORDER BY id DESC";
 $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -67,7 +67,7 @@ include ("../html/header.php");
                 if (!empty($row['photo'])) {
                     echo '<img src="' . ($row['photo']) . '"class=picture"' . '" alt="Annonce Image">';
                 }
-                echo '<button type="button" onclick="location.href=\'Home.php\'">Contact the owner!</button>';
+                echo '<form action="chatPage.php" method="post"><input type="hidden" name ="user2" value= ' .($row['user_id']).'><button type="submit">Contact the owner!</button></form>';
                 echo '</div>';
 
             }

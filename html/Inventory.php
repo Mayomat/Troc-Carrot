@@ -3,7 +3,7 @@
 session_start();
 $servername = "localhost";
 $username = "root";
-$password = "Antoine-972";
+$password = "YourPassword";
 $database = "Troc_carrot";
 
 // DB connection

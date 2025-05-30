@@ -9,7 +9,7 @@ if (!isset($_SESSION['username'])) {
 
 $servername = "localhost";
 $username = "root";
-$password = "Antoine-972";
+$password = "Japon2019shita!";
 $database = "Troc_carrot";
 
 // Connect to database
@@ -47,12 +47,7 @@ include ("../html/header.php")
     <h2>Here are some information about your account :</h2>
     <p>Email: <?php echo ($_SESSION['email']); ?></p>
     <h3>Your inventory :</h3>
-    <?php
-    if ($result->num_rows===0){
-        echo '<p>You have not posted for the moment !</p>';
 
-    }
-    ?>
 
 
 
@@ -75,6 +70,8 @@ include ("../html/header.php")
             }
             echo '</div>';
         }
+    } else {
+        echo '<p>You have not posted for the moment !</p>';
     }
     $conn->close();
     ?>

@@ -1,0 +1,152 @@
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    background-image: url(../img/bg.png);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER FIXE */
+.TitleBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px; /* Hauteur fixe */
+    background-color: darkorange;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    box-sizing: border-box;
+    box-shadow: rgba(17, 17, 26, 0.1) 0 4px 16px, rgba(17, 17, 26, 0.1) 0 8px 24px, rgba(17, 17, 26, 0.1) 0 16px 56px;
+}
+
+#titre {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#titre a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.top-button-left,
+.top-button-right {
+    position: absolute;
+    top: 0;
+    height: 70px; /* Même hauteur que le header */
+    display: flex;
+    align-items: center;
+}
+.top-button-left {
+    left: 24px;
+}
+.top-button-right {
+    right: 24px;
+    gap: 12px;
+}
+
+
+.top-button-right #signupbutton,
+.top-button-right #loginbutton {
+    display: flex;
+}
+
+#loginbutton,
+#signupbutton,
+#profile,
+#inventorybutton {
+    background-color: orange;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    margin: 0 2px;
+    min-width: 80px;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginbutton a,
+#signupbutton a,
+#inventorybutton a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#loginbutton:hover,
+#signupbutton:hover,
+#inventorybutton:hover {
+    background-color: #e69500;
+}
+
+
+
+
+
+/* Message Box Container */
+.message-box {
+    width: 10%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0 4px 16px,
+    rgba(17, 17, 26, 0.1) 0 8px 24px,
+    rgba(17, 17, 26, 0.1) 0 16px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The chat button inside */
+.message-box button[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: darkorange;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.message-box button[type="submit"]:hover {
+    background-color: #e69500;
+}
+
+#chats{
+    padding-top: 100px;
+}

@@ -13,7 +13,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <?php if (isset($_SESSION['username'])): ?>
             <div class="top-button-left">
                 <div id="inventorybutton"><a href="Inventory.php">Inventory</a></div>
-                <div id="chatbutton"><a href="Chat.php">Chat</a></div>
+                <div id="chatbutton"><a href="everyChat.php">Chat</a></div>
             </div>
 
         <?php endif?>
