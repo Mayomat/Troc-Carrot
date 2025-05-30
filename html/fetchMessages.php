@@ -1,5 +1,5 @@
 <?php
-
+session_start();
     $user1 = $_POST["user1"];
     $user2 = $_POST["user2"];
 

@@ -3,7 +3,7 @@
 session_start();
 $servername = "localhost";
 $username = "root";
-$password = "YourPassword";
+$password = "Antoine-972";
 $database = "Troc_carrot";
 
 // Connect to database
@@ -37,7 +37,12 @@ include("header.php")
 
 
 <?php
-if ($result->num_rows > 0) {
+if ($result->num_rows ===0){
+    echo'<div class="MiddleBox">';
+    echo'<p> No conversation for the moment !';
+    echo'</div>';
+}
+else {
     while ($row = $result->fetch_assoc()) {
         // Get the other user's ID
         $idUser = ($row['id1'] == $user1) ? $row['id2'] : $row['id1'];
@@ -59,8 +64,6 @@ if ($result->num_rows > 0) {
             echo '</div>';
         }
     }
-} else {
-    echo 'No chats found.';
 }
 
 ?>

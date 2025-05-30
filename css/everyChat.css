@@ -114,8 +114,8 @@ body {
 
 
 /* Message Box Container */
+/* Message Box Container */
 .message-box {
-    width: 10%;
     margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
@@ -125,11 +125,12 @@ body {
     rgba(17, 17, 26, 0.1) 0 16px 56px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    width: fit-content;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* The chat button inside */
+/* The messages button inside */
 .message-box button[type="submit"] {
     padding: 10px 20px;
     border-radius: 10px;
@@ -143,10 +144,12 @@ body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
+
 .message-box button[type="submit"]:hover {
     background-color: #e69500;
 }
 
 #chats{
     padding-top: 100px;
+
 }

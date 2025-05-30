@@ -2,7 +2,7 @@
     session_start();
 $servername = "localhost";
 $username = "root";
-$password = "YourPassword";
+$password = "Antoine-972";
 $database = "Troc_carrot";
 
 // Connect to database

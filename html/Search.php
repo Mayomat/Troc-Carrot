@@ -2,7 +2,7 @@
 session_start();
 $servername = "localhost";
 $username = "root";
-$password = "YourPassword";
+$password = "Antoine-972";
 $database = "Troc_carrot";
 
 // Connect to database
@@ -11,8 +11,31 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch all annonces
-$sql = "SELECT title, price, description, location, type, photo, created_at, user_id FROM annonces ORDER BY id DESC";
+// Initialize filter variables
+$name = isset($_POST['name']) ? trim($_POST['name']) : '';
+$place = isset($_POST['place']) ? trim($_POST['place']) : '';
+
+// Build SQL query dynamically
+$sql = "SELECT title, price, description, location, type, photo, created_at, user_id FROM annonces WHERE 1";
+
+if (!empty($name)) {
+    $sql .= " AND title LIKE '%" . $conn->real_escape_string($name) . "%'";
+}
+if (!empty($place)) {
+    $sql .= " AND location LIKE '%" . $conn->real_escape_string($place) . "%'";
+}
+$typeArray = isset($_POST['type']) ? $_POST['type'] : [];
+
+if (!empty($typeArray)) {
+    $safeTypes = array_map([$conn, 'real_escape_string'], $typeArray);
+    $quotedTypes = array_map(function ($t) {
+        return "'" . $t . "'";
+    }, $safeTypes);
+    $sql .= " AND type IN (" . implode(',', $quotedTypes) . ")";
+}
+
+
+$sql .= " ORDER BY id DESC";
 $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -31,7 +54,7 @@ include ("../html/header.php");
 ?>
     <div class="MiddleBox">
 
-        <form class="caracteristique">
+        <form method="POST" class="caracteristique" action="Search.php">
             <?php if ($result->num_rows === 0): ?> <!-- syntax to avoid using echo -->
                 <p class="MiddleBox">No annonces found for the moment. <a href="Post.php">Be the first one to post!</a></p>
             <?php endif; ?>
@@ -42,11 +65,13 @@ include ("../html/header.php");
             <label for="place">Place:</label>
             <input type="text" name="place" id="place" />
             <div class="checkboxes">
-                <input type="checkbox" name="choice" id="rent" />
+                <input type="checkbox" name="type[]" id="rent" value="Renting" <?php if (isset($_POST['type']) && in_array('Rent', $_POST['type'])) echo 'checked'; ?> />
                 <label for="rent">Rent</label>
-                <input type="checkbox" name="lend" id="lend" />
+
+                <input type="checkbox" name="type[]" id="lend" value="Loaning" <?php if (isset($_POST['type']) && in_array('Lend', $_POST['type'])) echo 'checked'; ?> />
                 <label for="lend">Lend</label>
             </div>
+
             <button type="submit">Submit</button>
         </form>
     </div>

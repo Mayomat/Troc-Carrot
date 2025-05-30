@@ -9,7 +9,7 @@ if (!isset($_SESSION['username'])) {
 
 $servername = "localhost";
 $username = "root";
-$password = "Japon2019shita!";
+$password = "Antoine-972";
 $database = "Troc_carrot";
 
 // Connect to database
