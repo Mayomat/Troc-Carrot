@@ -80,6 +80,7 @@ include ("../html/header.php");
         <?php
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) { // fetch assoc reads a line of the db
+
                 echo '<div class="annonce-box">';
                 echo '<h2>' . ($row['title']) . '</h2>';
                 echo '<p><strong>Price:</strong> ' . ($row['price']) . '</p>';
@@ -92,7 +93,14 @@ include ("../html/header.php");
                 if (!empty($row['photo'])) {
                     echo '<img src="' . ($row['photo']) . '"class=picture"' . '" alt="Annonce Image">';
                 }
-                echo '<form action="chatPage.php" method="post"><input type="hidden" name ="user2" value= ' .($row['user_id']).'><button type="submit">Contact the owner!</button></form>';
+                if (isset($_SESSION['username'])) {
+                    echo '<form action="chatPage.php" method="post">
+            <input type="hidden" name="user2" value="' . htmlspecialchars($row['user_id']) . '">
+            <button type="submit">Contact the owner!</button>
+          </form>';
+                } else {
+                    echo '<p><a href="sign-up.php">Sign in to send a message</a></p>';
+                }
                 echo '</div>';
 
             }
