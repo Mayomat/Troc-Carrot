@@ -26,12 +26,12 @@ body {
     padding-top: 1%;
     background-color: darkorange;
     position: fixed;
-    top : 0%;
+    top : 0;
     justify-content: center;
     color:white;
     font-size: 36px;
     font-family: Arial, Helvetica, sans-serif;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0 4px 16px, rgba(17, 17, 26, 0.1) 0 8px 24px, rgba(17, 17, 26, 0.1) 0 16px 56px;
 }
 
 .top-button-left,
@@ -105,11 +105,10 @@ body {
     background: #fff;
     padding: 5%; /* Adjusted padding to use percentages */
     border-radius: 2%; /* Rounded corners in percentage */
-    box-shadow: 0 4% 6% rgba(0, 0, 0, 0.1);
     width: 90%; /* Adjusted width to use percentage */
     max-width: 400px;
     margin-right: 5%; /* Added margin to create space on the right */
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0 4px 16px, rgba(17, 17, 26, 0.1) 0 8px 24px, rgba(17, 17, 26, 0.1) 0 16px 56px;
 }
 
 /* Header styles */
@@ -133,7 +132,6 @@ body {
 .form-group input {
     width: 95%; /* Reduced width to add space on the right */
     padding: 2%; /* Adjusted padding to use percentage */
-    border: 1% solid #ccc; /* Adjusted border width to use percentage */
     border-radius: 2%; /* Rounded corners in percentage */
 }
 
