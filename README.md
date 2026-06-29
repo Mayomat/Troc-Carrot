@@ -34,13 +34,19 @@ To run this project locally, you only need a modern web browser (Google Chrome, 
 **Clone the repository:**
    ```bash
    git clone [https://github.com/msirier/Troc-Carrot.git](https://github.com/msirier/Troc-Carrot.git)
+   ```
 
 ### Pictures
 1. **Home Page**
 <img width="1476" height="907" alt="image" src="https://github.com/user-attachments/assets/96377f7a-2f26-464c-aeec-fd733afdec74" />
 
+
+
 2. **Inventory page**
-<img width="1486" height="911" alt="image" src="https://github.com/user-attachments/assets/7bf2f5e8-db5f-4bf6-a880-8f3f4f3cf8d5" />
+<img width="1475" height="911" alt="image" src="https://github.com/user-attachments/assets/726882e1-ce98-4fc3-b649-a887e465140e" />
+
+
+
 
 3. **Sign up page**
 <img width="1477" height="907" alt="image" src="https://github.com/user-attachments/assets/cf3101b4-b599-49b2-8615-f5a80f7f5a32" />
