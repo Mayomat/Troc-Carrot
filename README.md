@@ -31,6 +31,17 @@ This project utilizes modern web technologies to ensure performance and visual a
 To run this project locally, you only need a modern web browser (Google Chrome, Firefox, Safari, Edge, etc.) or a simple local server environment.
 
 ### Installation & Quick Start
-1. **Clone the repository:**
+**Clone the repository:**
    ```bash
    git clone [https://github.com/msirier/Troc-Carrot.git](https://github.com/msirier/Troc-Carrot.git)
+
+### Pictures
+1. **Home Page**
+<img width="1476" height="907" alt="image" src="https://github.com/user-attachments/assets/96377f7a-2f26-464c-aeec-fd733afdec74" />
+
+2. **Inventory page**
+<img width="1486" height="911" alt="image" src="https://github.com/user-attachments/assets/7bf2f5e8-db5f-4bf6-a880-8f3f4f3cf8d5" />
+
+3. **Sign up page**
+<img width="1477" height="907" alt="image" src="https://github.com/user-attachments/assets/cf3101b4-b599-49b2-8615-f5a80f7f5a32" />
+
